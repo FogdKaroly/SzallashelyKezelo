@@ -12,14 +12,13 @@ namespace SzallashelyKezelo
 
         private void ListaFrissites()
         {
-            List<Szallashely> szallashelyek = new();
+            Lista szallashelyek = new();
             szallashelyek.AddRange(ABMuveletek.SzallodaLekeres());
             szallashelyek.AddRange(ABMuveletek.PanzioLekeres());
             szallashelyek.AddRange(ABMuveletek.CampingLekeres());
             
             listBox1.DataSource = null;
             listBox1.DataSource = szallashelyek;
-            
         }
 
         private void szallasFelvitelBtn_Click(object sender, EventArgs e)
